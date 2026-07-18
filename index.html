@@ -5,27 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Samra Fakhar, Senior DevOps Engineer</title>
   <meta name="description" content="Samra Fakhar. Senior DevOps Engineer with six years building, securing and scaling AWS platforms for a growing healthcare company." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
       theme: { extend: {
-        fontFamily: { sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'] },
+        fontFamily: { sans: ['Calibri', 'Carlito', 'Segoe UI', 'system-ui', 'sans-serif'] },
         colors: {
           eggshell: '#f4f1e8',
-          forest: { DEFAULT: '#2f5d43', dark: '#223f2e' },
-          sage: { DEFAULT: '#8aa591', mid: '#9db8a5', light: '#e6eee4' }
+          forest: { DEFAULT: '#2f5d43', dark: '#223f2e', soft: '#4e7359' },
+          sage: { DEFAULT: '#8aa591', mid: '#9db8a5', light: '#e6eee4', border: '#cbd8cb' }
         }
       } }
     }
   </script>
   <style>
     html { -webkit-font-smoothing: antialiased; }
+    body { font-family: 'Calibri', 'Carlito', 'Segoe UI', system-ui, sans-serif; }
     header svg, #book svg, footer svg, section svg.h-4 { width: 16px; height: 16px; }
-    .group svg { color: #94a3b8; }
-    .group:hover svg { color: #2f5d43; }
+    .group svg { color: #2f5d43; }
+    .group:hover svg { color: #223f2e; }
+    /* location + work-permit icons are not inside .group */
+    header span > svg { color: #2f5d43; }
     body { background-color: #f4f1e8; background-image: radial-gradient(60rem 40rem at 85% -5%, rgba(47,93,67,0.07), transparent 60%); background-repeat: no-repeat; }
     a:focus-visible, button:focus-visible { outline: 2px solid #2f5d43; outline-offset: 3px; border-radius: 3px; }
     @media (prefers-reduced-motion: no-preference) { a, button { transition: color .15s ease, background-color .15s ease; } }
@@ -38,53 +38,53 @@
 
     <!-- ============ HEADER ============ -->
     <header class="pt-16 pb-10 sm:pt-24">
-      <div class="text-center">
-        <p class="text-xs font-semibold uppercase tracking-[0.2em] text-forest">DevOps &middot; Cloud &middot; Security &middot; Platform Reliability</p>
-        <h1 class="mt-4 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">Samra Fakhar</h1>
-        <div class="mx-auto mt-4 h-[3px] w-16 rounded-full bg-gradient-to-r from-forest via-sage to-transparent"></div>
+      <div class="flex flex-col gap-6 sm:flex-row sm:items-start sm:justify-between">
+        <div>
+          <p class="text-xs font-semibold uppercase tracking-[0.2em] text-forest">DevOps &middot; Cloud &middot; Security &middot; Platform Reliability</p>
+          <h1 class="mt-4 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">Samra Fakhar</h1>
+          <div class="mt-4 h-[3px] w-16 rounded-full bg-gradient-to-r from-forest via-sage to-transparent"></div>
+          <p class="mt-6 text-lg font-medium text-slate-700">Senior DevOps Engineer</p>
+          <p class="mt-1 text-sm text-forest-soft">AWS Certified Solutions Architect</p>
+        </div>
+        <!-- Booking CTA (top right) -->
+        <div id="book" class="shrink-0">
+          <a href="https://calendar.app.google/sf5gPoJgtayNGhhz9" target="_blank" rel="noopener"
+             class="inline-flex items-center gap-2 rounded-lg bg-forest px-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-forest-dark">
+            <svg width="16" height="16" class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/><path d="m9 16 2 2 4-4"/></svg>
+            Book a 30-minute call
+          </a>
+        </div>
       </div>
-      <p class="mt-6 text-lg font-medium text-slate-700">Senior DevOps Engineer</p>
-      <p class="mt-1 text-sm text-slate-500">AWS Certified Solutions Architect &ndash; Associate</p>
 
       <!-- Contact bar with icons -->
       <div class="mt-7 flex flex-wrap items-center gap-x-6 gap-y-3 text-sm text-slate-600">
         <a href="mailto:samrafakhar11@gmail.com" class="group inline-flex items-center gap-2 hover:text-forest">
-          <svg width="16" height="16" class="h-4 w-4 text-slate-400 group-hover:text-forest" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+          <svg width="16" height="16" class="h-4 w-4 text-forest group-hover:text-forest" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
           samrafakhar11@gmail.com
         </a>
         <a href="tel:+16477624160" class="group inline-flex items-center gap-2 hover:text-forest">
-          <svg width="16" height="16" class="h-4 w-4 text-slate-400 group-hover:text-forest" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.5 2.1L8 9.6a16 16 0 0 0 6 6l1.1-1.1a2 2 0 0 1 2.1-.5c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.7 2Z"/></svg>
+          <svg width="16" height="16" class="h-4 w-4 text-forest group-hover:text-forest" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.5 2.1L8 9.6a16 16 0 0 0 6 6l1.1-1.1a2 2 0 0 1 2.1-.5c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.7 2Z"/></svg>
           647-762-4160
         </a>
         <a href="https://www.linkedin.com/in/samra-fakhar" target="_blank" rel="noopener" class="group inline-flex items-center gap-2 hover:text-forest">
-          <svg width="16" height="16" class="h-4 w-4 text-slate-400 group-hover:text-forest" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13ZM7.12 20.45H3.55V9h3.57v11.45ZM22.22 0H1.77C.8 0 0 .78 0 1.75v20.5C0 23.22.8 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.75V1.75C24 .78 23.2 0 22.22 0Z"/></svg>
+          <svg width="16" height="16" class="h-4 w-4 text-forest group-hover:text-forest" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13ZM7.12 20.45H3.55V9h3.57v11.45ZM22.22 0H1.77C.8 0 0 .78 0 1.75v20.5C0 23.22.8 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.75V1.75C24 .78 23.2 0 22.22 0Z"/></svg>
           samra-fakhar
         </a>
-        <span class="inline-flex items-center gap-2 text-slate-500">
-          <svg width="16" height="16" class="h-4 w-4 text-slate-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+        <span class="inline-flex items-center gap-2 text-forest-soft">
+          <svg width="16" height="16" class="h-4 w-4 text-forest" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
           Vaughan, ON
         </span>
-        <span class="inline-flex items-center gap-2 text-slate-500">
-          <svg width="16" height="16" class="h-4 w-4 text-slate-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+        <span class="inline-flex items-center gap-2 text-forest-soft">
+          <svg width="16" height="16" class="h-4 w-4 text-forest" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
           Open work permit
         </span>
-      </div>
-
-      <!-- Booking CTA -->
-      <div id="book" class="mt-9 flex flex-wrap items-center gap-4">
-        <a href="https://calendar.app.google/sf5gPoJgtayNGhhz9" target="_blank" rel="noopener"
-           class="inline-flex items-center gap-2 rounded-lg bg-forest px-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-forest-dark">
-          <svg width="16" height="16" class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/><path d="m9 16 2 2 4-4"/></svg>
-          Book a 30-minute call
-        </a>
-        <span class="text-sm text-slate-500">or reach me at <a href="mailto:samrafakhar11@gmail.com" class="font-medium text-forest hover:underline underline-offset-4">samrafakhar11@gmail.com</a></span>
       </div>
     </header>
 
     <!-- ============ SECTION NAV ============ -->
-    <nav aria-label="Section navigation" class="sticky top-0 z-10 -mx-6 border-b border-t border-slate-200 bg-eggshell/95 px-6 py-3 backdrop-blur sm:-mx-10 sm:px-10">
-      <div class="flex flex-wrap items-center gap-x-5 gap-y-1 text-sm font-medium text-slate-500">
-        <span class="text-xs uppercase tracking-widest text-slate-400">Jump to</span>
+    <nav aria-label="Section navigation" class="sticky top-0 z-10 -mx-6 border-b border-t border-sage-border bg-eggshell/95 px-6 py-3 backdrop-blur sm:-mx-10 sm:px-10">
+      <div class="flex flex-wrap items-center gap-x-5 gap-y-1 text-sm font-medium text-forest-soft">
+        <span class="text-xs uppercase tracking-widest text-forest">Jump to</span>
         <a href="#infra" class="hover:text-forest">Infrastructure</a>
         <a href="#cicd" class="hover:text-forest">CI/CD</a>
         <a href="#security" class="hover:text-forest">Security</a>
@@ -97,8 +97,8 @@
 
     <!-- ============ ABOUT ============ -->
     <section id="about" class="py-14">
-      <h2 class="text-xs font-semibold uppercase tracking-widest text-slate-400">About</h2>
-      <div class="mt-5 max-w-3xl space-y-5 text-[15px] leading-relaxed text-slate-700">
+      <h2 class="text-xs font-semibold uppercase tracking-widest text-forest">About</h2>
+      <div class="mt-5 max-w-3xl space-y-5 text-[15px] leading-relaxed text-slate-700 text-justify">
         <p>
           I joined <a href="https://razormetrics.com/" target="_blank" rel="noopener" class="font-medium text-forest hover:underline underline-offset-4">RazorMetrics</a>
           in 2021 as the company's first and only DevOps engineer. Back then it was a team of seven with no live customers,
@@ -119,27 +119,27 @@
     </section>
 
     <!-- ============ ROLES ============ -->
-    <section aria-label="Roles" class="border-t border-slate-200 py-10">
-      <h2 class="text-xs font-semibold uppercase tracking-widest text-slate-400">Roles</h2>
+    <section aria-label="Roles" class="border-t border-sage-border py-10">
+      <h2 class="text-xs font-semibold uppercase tracking-widest text-forest">Roles</h2>
       <div class="mt-5 space-y-4 text-[15px]">
         <div class="flex flex-col justify-between gap-1 sm:flex-row sm:items-baseline">
-          <p><span class="font-semibold text-slate-900">Senior DevOps Engineer</span> &middot; <a href="https://razormetrics.com/" target="_blank" rel="noopener" class="text-forest hover:underline underline-offset-4">RazorMetrics</a> <span class="text-slate-500">(US healthcare technology, remote)</span></p>
-          <p class="shrink-0 text-sm text-slate-500">Jul 2024 &ndash; Present</p>
+          <p><span class="font-semibold text-slate-900">Senior DevOps Engineer</span> &middot; <a href="https://razormetrics.com/" target="_blank" rel="noopener" class="text-forest hover:underline underline-offset-4">RazorMetrics</a> <span class="text-forest-soft">(US healthcare technology, remote)</span></p>
+          <p class="shrink-0 text-sm text-forest-soft">Jul 2024 &ndash; Present</p>
         </div>
         <div class="flex flex-col justify-between gap-1 sm:flex-row sm:items-baseline">
           <p><span class="font-semibold text-slate-900">DevOps Engineer</span> &middot; <a href="https://razormetrics.com/" target="_blank" rel="noopener" class="text-forest hover:underline underline-offset-4">RazorMetrics</a></p>
-          <p class="shrink-0 text-sm text-slate-500">Aug 2021 &ndash; Jun 2024</p>
+          <p class="shrink-0 text-sm text-forest-soft">Aug 2021 &ndash; Jun 2024</p>
         </div>
         <div class="flex flex-col justify-between gap-1 sm:flex-row sm:items-baseline">
-          <p><span class="font-semibold text-slate-900">Software Engineering Intern</span> &middot; <a href="https://conradlabs.com/" target="_blank" rel="noopener" class="text-forest hover:underline underline-offset-4">Conrad Labs</a> <span class="text-slate-500">(Java Spring Boot, Angular, Elasticsearch, AWS)</span></p>
-          <p class="shrink-0 text-sm text-slate-500">Jun &ndash; Jul 2020</p>
+          <p><span class="font-semibold text-slate-900">Software Engineering Intern</span> &middot; <a href="https://conradlabs.com/" target="_blank" rel="noopener" class="text-forest hover:underline underline-offset-4">Conrad Labs</a> <span class="text-forest-soft">(Java Spring Boot, Angular, Elasticsearch, AWS)</span></p>
+          <p class="shrink-0 text-sm text-forest-soft">Jun &ndash; Jul 2020</p>
         </div>
       </div>
     </section>
 
     <main>
       <!-- ============ INFRASTRUCTURE ============ -->
-      <section id="infra" class="scroll-mt-16 border-t border-slate-200 py-14">
+      <section id="infra" class="scroll-mt-16 border-t border-sage-border py-14">
         <div class="md:grid md:grid-cols-[180px_1fr] md:gap-10">
           <div class="mb-8 md:mb-0">
             <div class="mb-3 h-1 w-8 rounded-full bg-forest"></div>
@@ -249,7 +249,7 @@
         </div>
       </section>
       <!-- ============ CI/CD & AUTOMATION ============ -->
-      <section id="cicd" class="scroll-mt-16 border-t border-slate-200 py-14">
+      <section id="cicd" class="scroll-mt-16 border-t border-sage-border py-14">
         <div class="md:grid md:grid-cols-[180px_1fr] md:gap-10">
           <div class="mb-8 md:mb-0">
             <div class="mb-3 h-1 w-8 rounded-full bg-forest"></div>
@@ -327,7 +327,7 @@
       </section>
 
       <!-- ============ SECURITY & COMPLIANCE ============ -->
-      <section id="security" class="scroll-mt-16 border-t border-slate-200 py-14">
+      <section id="security" class="scroll-mt-16 border-t border-sage-border py-14">
         <div class="md:grid md:grid-cols-[180px_1fr] md:gap-10">
           <div class="mb-8 md:mb-0">
             <div class="mb-3 h-1 w-8 rounded-full bg-forest"></div>
@@ -406,7 +406,7 @@
         </div>
       </section>
       <!-- ============ DATA, DATABASES & STREAMING ============ -->
-      <section id="data" class="scroll-mt-16 border-t border-slate-200 py-14">
+      <section id="data" class="scroll-mt-16 border-t border-sage-border py-14">
         <div class="md:grid md:grid-cols-[180px_1fr] md:gap-10">
           <div class="mb-8 md:mb-0">
             <div class="mb-3 h-1 w-8 rounded-full bg-forest"></div>
@@ -466,7 +466,7 @@
       </section>
 
       <!-- ============ OBSERVABILITY ============ -->
-      <section id="observability" class="scroll-mt-16 border-t border-slate-200 py-14">
+      <section id="observability" class="scroll-mt-16 border-t border-sage-border py-14">
         <div class="md:grid md:grid-cols-[180px_1fr] md:gap-10">
           <div class="mb-8 md:mb-0">
             <div class="mb-3 h-1 w-8 rounded-full bg-forest"></div>
@@ -509,7 +509,7 @@
       </section>
 
       <!-- ============ LEADERSHIP ============ -->
-      <section id="leadership" class="scroll-mt-16 border-t border-slate-200 py-14">
+      <section id="leadership" class="scroll-mt-16 border-t border-sage-border py-14">
         <div class="md:grid md:grid-cols-[180px_1fr] md:gap-10">
           <div class="mb-8 md:mb-0">
             <div class="mb-3 h-1 w-8 rounded-full bg-forest"></div>
@@ -552,7 +552,7 @@
       </section>
     </main>
     <!-- ============ SKILLS ============ -->
-    <section id="skills" class="scroll-mt-16 border-t border-slate-200 py-14">
+    <section id="skills" class="scroll-mt-16 border-t border-sage-border py-14">
       <div class="mb-3 h-1 w-8 rounded-full bg-forest"></div>
       <h2 class="text-2xl font-bold tracking-tight text-slate-900">Skills</h2>
       <dl class="mt-7 space-y-5 text-[15px]">
@@ -600,26 +600,26 @@
     </section>
 
     <!-- ============ EDUCATION & CERTIFICATIONS ============ -->
-    <section class="border-t border-slate-200 py-14">
+    <section class="border-t border-sage-border py-14">
       <div class="grid gap-10 sm:grid-cols-2">
         <div>
-          <h2 class="text-xs font-semibold uppercase tracking-widest text-slate-400">Education</h2>
+          <h2 class="text-xs font-semibold uppercase tracking-widest text-forest">Education</h2>
           <p class="mt-5 font-semibold text-slate-900">BSc Computer Science</p>
           <p class="mt-1 text-[15px] text-slate-600">
             <a href="https://www.nu.edu.pk/" target="_blank" rel="noopener" class="text-forest hover:underline underline-offset-4">National University of Computer and Emerging Sciences (FAST-NU)</a>
           </p>
-          <p class="mt-1 text-sm text-slate-500">2017 &ndash; 2021</p>
+          <p class="mt-1 text-sm text-forest-soft">2017 &ndash; 2021</p>
         </div>
         <div>
-          <h2 class="text-xs font-semibold uppercase tracking-widest text-slate-400">Certifications</h2>
+          <h2 class="text-xs font-semibold uppercase tracking-widest text-forest">Certifications</h2>
           <ul class="mt-5 space-y-3 text-[15px]">
             <li>
-              <p class="font-semibold text-slate-900">AWS Certified Solutions Architect &ndash; Associate</p>
-              <p class="mt-0.5 text-sm text-slate-500">Credential ID: CTESMSPLNFB11VK</p>
+              <p class="font-semibold text-slate-900">AWS Certified Solutions Architect</p>
+              <p class="mt-0.5 text-sm text-forest-soft">Credential ID: CTESMSPLNFB11VK</p>
             </li>
             <li>
               <p class="font-semibold text-slate-900">Certified Kubernetes Application Developer (CKAD)</p>
-              <p class="mt-0.5 text-sm text-slate-500">In progress</p>
+              <p class="mt-0.5 text-sm text-forest-soft">In progress</p>
             </li>
           </ul>
         </div>
@@ -627,11 +627,11 @@
     </section>
 
     <!-- ============ CLOSING CTA ============ -->
-    <section class="border-t border-slate-200 py-14">
+    <section class="border-t border-sage-border py-14">
       <div class="rounded-2xl bg-gradient-to-br from-sage-light to-[#eef4ec] px-7 py-9 ring-1 ring-inset ring-[#d6e1d6] sm:px-10 sm:py-10">
         <h2 class="text-xl font-bold tracking-tight text-slate-900 sm:text-2xl">Let's talk</h2>
         <p class="mt-2 max-w-xl text-[15px] leading-relaxed text-slate-600">
-          Hiring for cloud infrastructure, platform reliability or DevSecOps?
+          Hiring for cloud infrastructure, platform reliability or DevSecOps? Book a 30-minute call with me or reach me at <a href="mailto:samrafakhar11@gmail.com" class="font-medium text-forest hover:underline underline-offset-4">samrafakhar11@gmail.com</a>.
         </p>
         <div class="mt-6 flex flex-wrap items-center gap-4">
           <a href="https://calendar.app.google/sf5gPoJgtayNGhhz9" target="_blank" rel="noopener"
@@ -639,20 +639,19 @@
             <svg width="16" height="16" class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/><path d="m9 16 2 2 4-4"/></svg>
             Book a 30-minute call
           </a>
-          <a href="mailto:samrafakhar11@gmail.com" class="text-sm font-medium text-forest hover:underline underline-offset-4">samrafakhar11@gmail.com</a>
         </div>
       </div>
     </section>
 
     <!-- ============ FOOTER ============ -->
-    <footer class="border-t border-slate-200 py-10">
-      <div class="flex flex-col items-start justify-between gap-4 text-sm text-slate-500 sm:flex-row sm:items-center">
+    <footer class="border-t border-sage-border py-10">
+      <div class="flex flex-col items-start justify-between gap-4 text-sm text-forest-soft sm:flex-row sm:items-center">
         <p>Samra Fakhar &middot; Senior DevOps Engineer</p>
         <p>
           <a href="mailto:samrafakhar11@gmail.com" class="hover:text-forest hover:underline underline-offset-4">Email</a>
-          <span class="mx-2 text-slate-300" aria-hidden="true">&middot;</span>
+          <span class="mx-2 text-sage-mid" aria-hidden="true">&middot;</span>
           <a href="https://www.linkedin.com/in/samra-fakhar" target="_blank" rel="noopener" class="hover:text-forest hover:underline underline-offset-4">LinkedIn</a>
-          <span class="mx-2 text-slate-300" aria-hidden="true">&middot;</span>
+          <span class="mx-2 text-sage-mid" aria-hidden="true">&middot;</span>
           <a href="#about" class="hover:text-forest hover:underline underline-offset-4">Back to top</a>
         </p>
       </div>
