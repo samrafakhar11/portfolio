@@ -85,12 +85,12 @@
     <nav aria-label="Section navigation" class="sticky top-0 z-10 -mx-6 border-b border-t border-sage-border bg-eggshell/95 px-6 py-3 backdrop-blur sm:-mx-10 sm:px-10">
       <div class="flex flex-wrap items-center gap-x-5 gap-y-1 text-sm font-medium text-forest-soft">
         <span class="text-xs uppercase tracking-widest text-forest">Jump to</span>
-        <a href="#infra" class="hover:text-forest">Infrastructure</a>
-        <a href="#cicd" class="hover:text-forest">CI/CD</a>
-        <a href="#security" class="hover:text-forest">Security</a>
-        <a href="#data" class="hover:text-forest">Data</a>
-        <a href="#observability" class="hover:text-forest">Observability</a>
-        <a href="#leadership" class="hover:text-forest">Leadership</a>
+        <a href="#y2026" class="hover:text-forest">2026</a>
+        <a href="#y2025" class="hover:text-forest">2025</a>
+        <a href="#y2024" class="hover:text-forest">2024</a>
+        <a href="#y2023" class="hover:text-forest">2023</a>
+        <a href="#y2022" class="hover:text-forest">2022</a>
+        <a href="#y2021" class="hover:text-forest">2021</a>
         <a href="#skills" class="ml-auto hover:text-forest">Skills</a>
       </div>
     </nav>
@@ -138,412 +138,714 @@
     </section>
 
     <main>
-      <!-- ============ INFRASTRUCTURE ============ -->
-      <section id="infra" class="scroll-mt-16 border-t border-sage-border py-14">
+      <!-- ============ 2026 ============ -->
+      <section id="y2026" class="scroll-mt-16 border-t border-sage-border py-14">
         <div class="md:grid md:grid-cols-[180px_1fr] md:gap-10">
           <div class="mb-8 md:mb-0">
             <div class="mb-3 h-1 w-8 rounded-full bg-forest"></div>
-            <h2 class="text-2xl font-bold tracking-tight text-slate-900">Infrastructure Design &amp; Architecture</h2>
+            <h2 class="text-2xl font-bold tracking-tight text-slate-900">2026</h2>
+            <p class="mt-2 text-sm leading-relaxed text-forest-soft">Org-wide Terraform standardization, Kafka in production, distributed infrastructure ownership.</p>
           </div>
           <div class="space-y-11">
 
             <article>
-              <h3 class="text-base font-semibold text-slate-900">Terraform platform &amp; distributed provisioning</h3>
+              <h3 class="text-base font-semibold text-slate-900">Terraform modernization &amp; module registry</h3>
               <ul class="mt-3 space-y-2 text-[15px] leading-relaxed text-slate-600">
-                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Migrated the entire estate off CloudFormation onto Terraform with Terragrunt. Removed circular dependencies, restructured state files and standardized naming across every environment.</li>
-                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Consolidated infrastructure into a 30-module registry spanning 13 AWS service families, publishing versioned releases to S3 through a tag-driven Bitbucket pipeline. New-service provisioning dropped from days to hours and configuration drift across environments went away.</li>
-                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Led the shift to a team-owned, distributed Terraform model. Broke the monolithic core repository into per-service repos (fax processing and receiving, PDF generation, platform frontend and backend, RPA automation), each with an independent deployment lifecycle, and ran the training and handover so product teams could own their own infrastructure.</li>
-                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Built a layered per-environment configuration override system so image changes no longer required artifact rebuilds.</li>
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Led the organization-wide Terraform modernization initiative end to end, covering module versioning, pipeline restructuring, distributed provisioning and pre-commit standardization across every engineering pod.</li>
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Built a centralized Terraform module registry on S3 with versioned publishing, automated release pipelines and a defined versioning policy, so every team consumes the same standardized, reusable infrastructure modules.</li>
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Executed the first major refactoring phase: migrated the platform frontend and backend services, the document-processing (fax) services and sandbox environments to new naming and structural conventions, eliminating legacy infrastructure variables across the estate with zero-downtime cutovers.</li>
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Migrated development networking from self-managed NAT instances to NAT Gateways, decommissioned the CloudFormation-managed NAT resources and cleaned orphaned stacks, unused Route 53 aliases and legacy environment configuration out of sandbox, dev and production.</li>
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Built an isolated end-to-end automated-test environment from scratch, deploying the platform, document-processing services and all associated pipelines, with onboarding documentation and separated resource pools for environment isolation.</li>
               </ul>
               <div class="mt-4 flex flex-wrap gap-1.5">
                 <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">Terraform</span>
                 <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">Terragrunt</span>
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">S3 module registry</span>
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">NAT Gateway</span>
                 <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">CloudFormation</span>
-                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">S3</span>
               </div>
             </article>
 
             <article>
-              <h3 class="text-base font-semibold text-slate-900">Containerization &amp; compute modernization</h3>
+              <h3 class="text-base font-semibold text-slate-900">Kafka streaming platform &mdash; production rollout</h3>
               <ul class="mt-3 space-y-2 text-[15px] leading-relaxed text-slate-600">
-                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Contributed to a monolith-to-microservices migration, breaking apart the shared database layer and moving workloads off EC2 onto Fargate and Glue for modular deployment and better resource utilization.</li>
-                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Dockerized legacy applications and moved the platform APIs, automated fax-response service, patient-advocacy application and data ingestors from EC2 to ECS/Fargate, with autoscaling, ALB integration and blue/green deployments for zero-downtime releases.</li>
-                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Migrated Lambda functions to Docker containers and modernized runtimes to Java 17, Node.js 18 and Python 3.11.</li>
-                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Built ECS/Fargate infrastructure for new services from scratch, including a discount-pricing application and a formulary-ingestion service.</li>
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Provisioned and configured AWS MSK clusters in both development and production, including networking, IAM authentication, security hardening and CloudWatch logging, all codified in Terraform.</li>
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Implemented per-service Kafka topic deployment through Terraform with clean directory structure and permissions management, plus reusable schema pipeline templates and versioned SDK publishing for Kafka schemas.</li>
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Set up AWS Glue Schema Registry with parameterized schema-push automation and dedicated CI agents, so schema management runs through the pipeline instead of by hand.</li>
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Deployed the Kafbat management console with SSL behind an ALB, read-only developer access, logging, auditing and authentication, giving teams cluster visibility without broker credentials.</li>
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Built consumer-lag alarms, broker-level monitoring and pipeline failure alerts for production cluster health, and provided the Kafka integration infrastructure for two new event-driven services.</li>
               </ul>
               <div class="mt-4 flex flex-wrap gap-1.5">
-                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">Docker</span>
-                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">ECS Fargate</span>
-                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">ECR</span>
-                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">AWS Glue</span>
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">Apache Kafka</span>
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">AWS MSK</span>
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">Glue Schema Registry</span>
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">Kafbat</span>
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">Terraform</span>
               </div>
             </article>
 
             <article>
-              <h3 class="text-base font-semibold text-slate-900">Multi-account &amp; multi-region architecture</h3>
+              <h3 class="text-base font-semibold text-slate-900">CI/CD engineering &amp; developer experience</h3>
               <ul class="mt-3 space-y-2 text-[15px] leading-relaxed text-slate-600">
-                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Created a fully isolated AWS development account and migrated the entire dev estate into it. This covered cross-account IAM roles, S3 replication, Parameter Store migration, CMK-encrypted snapshot transfer and role assumption to promote data and jobs between accounts. Afterward I deleted the legacy development footprint from the production account to shrink blast radius.</li>
-                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Architected infrastructure across 2 regions and 3 accounts. Relocated development from us-east-1 to us-east-2 and split Terraform state to manage each region independently.</li>
-                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Designed complex VPC layouts with multi-AZ subnetting, NAT gateways, route tables and secure cross-environment connectivity, then moved workloads into private subnets to cut public exposure.</li>
-                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Relocated contractor workspaces to the AP-Southeast (Singapore) region with VPC peering, new images and enforced workspace security policies.</li>
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Designed and maintained Jenkins deployment pipelines for ECS services, Fargate tasks, Lambda functions, Glue jobs and Terraform infrastructure across production and prerelease environments.</li>
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Separated Jenkins infrastructure between production and prerelease with independent admin credentials and JCasC role and permission setup, and implemented audit logging through task-definition sidecars for SOC 2 compliance.</li>
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Shipped infrastructure deployment pipelines that run directly from service repositories, so product teams self-serve their own infrastructure provisioning instead of queuing on the platform team.</li>
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Rolled out a dynamic pre-commit pipeline framework across all seven engineering pods, standardizing formatting, linting and security scanning in CI, and resolved the migration fallout across every affected repository.</li>
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Built shared developer tooling: a repository for distributing AI-assistant (Cursor) skills across the engineering team, Java and Python UUIDv7 libraries for cross-team adoption, and self-service documentation for Jenkins release-manager onboarding.</li>
               </ul>
               <div class="mt-4 flex flex-wrap gap-1.5">
-                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">Multi-account AWS</span>
-                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">VPC</span>
-                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">IAM</span>
-                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">KMS</span>
-                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">Route 53</span>
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">Jenkins</span>
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">JCasC</span>
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">Bitbucket</span>
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">Pre-commit</span>
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">Docker / ECR</span>
               </div>
             </article>
 
             <article>
-              <h3 class="text-base font-semibold text-slate-900">Multi-tenant deployment &amp; scaling for load</h3>
+              <h3 class="text-base font-semibold text-slate-900">Database replication &amp; data infrastructure</h3>
               <ul class="mt-3 space-y-2 text-[15px] leading-relaxed text-slate-600">
-                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Re-architected the deployment pipeline so the platform could spin up isolated, per-client application stacks. Removing hard-coded environment constraints and parameterizing branch and database names decoupled code versioning from environment identity, which directly enabled the company's first major enterprise client onboarding.</li>
-                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Built the fax-processing service infrastructure from scratch (VPC, subnets, ALB, ECS, S3, SQS, IAM, pipelines), then re-architected it for a step change in inbound volume through queue scaling, worker-concurrency tuning and resource right-sizing.</li>
-                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Stood up complete production-grade environments for new enterprise health-plan and pharmacy clients, covering application servers, memory-optimized Aurora databases, baseline software and initialized data.</li>
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Designed and implemented AWS DMS replication from the delivery database into the analytics cluster with Terraform, read-only user provisioning, networking, security groups and validation testing, then extended DMS to the reporting ETL and directory databases with schema-sync and validation-mismatch resolution.</li>
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Tuned replication economics with stop/start schedulers and capacity scaling on serverless replication tasks, keeping near-real-time sync without paying for idle throughput.</li>
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Rebuilt the evaluation-database restore process on ECS with mounted EBS volumes, removing the storage ceiling that broke the old approach, and wrapped it with schedulers, updated SQL constraint and permission scripts and Jenkins pipelines.</li>
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Performed production point-in-time database restores with clean post-restore cluster teardown, and provisioned read-only access, dedicated customer-data-pipeline databases and BI connectivity via PostgreSQL SSH connectors into the reporting platform against a production read replica.</li>
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Built ingestion infrastructure for automated data pipelines: Fargate task definitions with cron and EventBridge triggers, scheduled-task support in Jenkins backed by the Terraform registry, and reusable Lambda modules for customer file operations.</li>
               </ul>
               <div class="mt-4 flex flex-wrap gap-1.5">
-                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">ECS</span>
-                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">ALB / Autoscaling</span>
-                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">SQS</span>
-                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">Aurora</span>
-              </div>
-            </article>
-
-            <article>
-              <h3 class="text-base font-semibold text-slate-900">Serverless, connectivity &amp; secure access</h3>
-              <ul class="mt-3 space-y-2 text-[15px] leading-relaxed text-slate-600">
-                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Built event-driven and serverless workflows with EventBridge, Step Functions, Lambda and SQS for loosely coupled integration, and delivered secure API and content-delivery layers through API Gateway, CloudFront and WAF.</li>
-                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Designed a secure SFTP ingestion platform on AWS Transfer Family with VPC endpoints, S3-backed directories and per-user IAM, replacing legacy self-hosted infrastructure for auditable, compliant transfer.</li>
-                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Managed secure virtual-desktop access (AWS WorkSpaces and WorkSpaces Web) for agents handling PHI, scaling to 150+ concurrent IP-restricted sessions, and built the contact-center infrastructure with API Gateway, Lambda and streaming to QuickSight.</li>
-              </ul>
-              <div class="mt-4 flex flex-wrap gap-1.5">
-                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">Lambda</span>
-                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">Step Functions</span>
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">AWS DMS</span>
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">Aurora PostgreSQL</span>
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">ECS / EBS</span>
                 <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">EventBridge</span>
-                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">API Gateway</span>
-                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">CloudFront</span>
-                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">Transfer Family</span>
-                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">WorkSpaces</span>
-                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">Amazon Connect</span>
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">DOMO</span>
               </div>
             </article>
 
             <article>
-              <h3 class="text-base font-semibold text-slate-900">Disaster recovery &amp; cost optimization</h3>
+              <h3 class="text-base font-semibold text-slate-900">Security, compliance &amp; penetration testing</h3>
               <ul class="mt-3 space-y-2 text-[15px] leading-relaxed text-slate-600">
-                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Established the platform's first disaster-recovery environment from scratch. Defined RTO/RPO, wrote runbooks and ran failover and backup-restoration drills across a multi-region strategy.</li>
-                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Ran regular cost reviews driving instance right-sizing, off-hours scheduling, resource lifecycle policies and cleanup of orphaned EBS snapshots, AMIs, elastic IPs, unattached volumes and deprecated services, which reduced monthly AWS spend.</li>
-                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Cleaned up legacy NAT CloudFormation templates, orphaned Route 53 aliases and stale environments, and resolved security-group rule-limit errors and standing infrastructure sprawl.</li>
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Prepared and delivered 28 SOC 2 evidence items covering IDS/IPS configuration, firewall rulesets, network segmentation, endpoint protection, change control, audit logs, user permission listings, backup-restore tests, MFA configuration and encryption evidence.</li>
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Supported the annual third-party penetration test end to end: provisioned scoped test identities across IAM and the SFTP/transfer services, then remediated the findings.</li>
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Remediated software vulnerabilities across the core infrastructure repositories and container registries, and worked through Prowler findings including unused console access, stale access keys and IAM policy attachment hygiene.</li>
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Ran the managed vulnerability-scanning integration across all production VPCs: whitelisted the scanner (Greenbone) for TCP and ICMP across every service endpoint, verified GuardDuty coverage and wired security-log ingestion into the MDR provider.</li>
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Deployed SentinelOne EDR and Elastic agents across EC2 fleets in every VPC, enforced MFA on production IAM roles, set default encryption for EBS and S3, added file-integrity-monitoring evidence and change detection, and restricted CloudShell to block unauthorized ECS task access.</li>
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Implemented WAF rate-based malicious-IP blocking on the production platform and resolved security-group rule-capacity limits with a redesigned, scalable security-group management approach.</li>
               </ul>
               <div class="mt-4 flex flex-wrap gap-1.5">
-                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">AWS Backup</span>
-                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">RTO / RPO</span>
-                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">Cost optimization</span>
-                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">EC2 / ASG</span>
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">SOC 2</span>
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">Penetration testing</span>
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">SentinelOne</span>
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">GuardDuty</span>
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">AWS WAF</span>
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">Prowler</span>
+              </div>
+            </article>
+
+            <article>
+              <h3 class="text-base font-semibold text-slate-900">Platform migrations, launches &amp; operations</h3>
+              <ul class="mt-3 space-y-2 text-[15px] leading-relaxed text-slate-600">
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Executed the end-to-end migration of platform frontend and backend services and both document-processing services to the new infrastructure conventions, covering Docker image promotion, conditional pipeline stages, SQS queue migrations, security groups and certificate management, with zero-downtime transitions.</li>
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Ran the Amazon Linux 2 end-of-life migration for remaining services, and refreshed base images for all ECS services and tasks to the latest security-patched versions with tested, coordinated fleet-wide rollouts.</li>
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Supported two enterprise customer launches by promoting full production stacks and post-launch configuration changes, and handled ongoing customer data-pipeline setup: SFTP users, home directories and S3 access provisioning.</li>
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Refactored RPA-automation Lambdas to module-based queue provisioning, supported contact-center workflow changes (DynamoDB backup/restore testing, SQS provisioning, legacy resource cleanup) and applied managed-service engine updates across ElastiCache, OpenSearch and RDS.</li>
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Carried a heavy operations load throughout: triaging production infrastructure alerts across pipelines, databases, ECS, Lambda, Kafka and networking; resolving cross-team support requests; executing production change-management deployments with verification and rollback readiness; and reviewing infrastructure PRs across all seven engineering pods.</li>
+              </ul>
+              <div class="mt-4 flex flex-wrap gap-1.5">
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">ECS Fargate</span>
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">SQS</span>
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">DynamoDB</span>
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">Change management</span>
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">On-call</span>
               </div>
             </article>
 
           </div>
         </div>
       </section>
-      <!-- ============ CI/CD & AUTOMATION ============ -->
-      <section id="cicd" class="scroll-mt-16 border-t border-sage-border py-14">
+
+      <!-- ============ 2025 ============ -->
+      <section id="y2025" class="scroll-mt-16 border-t border-sage-border py-14">
         <div class="md:grid md:grid-cols-[180px_1fr] md:gap-10">
           <div class="mb-8 md:mb-0">
             <div class="mb-3 h-1 w-8 rounded-full bg-forest"></div>
-            <h2 class="text-2xl font-bold tracking-tight text-slate-900">DevOps, CI/CD &amp; Automation</h2>
+            <h2 class="text-2xl font-bold tracking-tight text-slate-900">2025</h2>
+            <p class="mt-2 text-sm leading-relaxed text-forest-soft">Jenkins platform built from scratch, Kafka foundations, Glue data platform, security tooling overhaul.</p>
           </div>
           <div class="space-y-11">
 
             <article>
               <h3 class="text-base font-semibold text-slate-900">Jenkins CI/CD platform, built from the ground up</h3>
               <ul class="mt-3 space-y-2 text-[15px] leading-relaxed text-slate-600">
-                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Built the Jenkins CI/CD platform on ECS/Fargate with EFS-backed persistence, SAML SSO, Configuration as Code, reusable templates, validation checks and an audit trail. This moved 50+ deployments off CodePipeline and cut deployment time by roughly 30%.</li>
-                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Delivered template-based pipelines for services, Lambdas, Fargate tasks and Glue jobs with multi-environment orchestration across dev, prerelease, sandbox and production, plus webhook-driven cross-environment promotion, Slack build notifications and role-based release access.</li>
-                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Created a JSON-based service catalog for ~50 services, mapping each application to its deployment target and auto-routing Jenkins through templated Jenkinsfiles. Onboarding a new service went from editing pipeline code to adding one catalog entry.</li>
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Designed, built and ran a fully self-hosted Jenkins CI/CD platform on AWS ECS with EFS-backed persistent storage, SSL termination and private-subnet deployment. It became the deployment backbone for the whole engineering organization.</li>
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Migrated 15+ Lambda deployment pipelines, every ECS Fargate task pipeline (pricing, formulary ingestion, fill processing, eligibility sync, claims ingestion, switch analysis, database migrations) and all AWS Glue job pipelines off CodePipeline and Bitbucket Pipelines onto Jenkins, with validation, safety checks and notifications.</li>
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Built Jenkins Terraform pipelines handling multi-region deployments, solving edge cases in Lambda artifact change detection, cross-region resource dependencies, Terragrunt file-deletion detection and pipeline state resets after redeployments.</li>
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Implemented dynamic promotion stages with commit and branch validation, a unified multi-stage view for production pipelines that trigger downstream environments via webhooks, Slack build notifications through a custom app, and manual approval gates for production.</li>
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Enabled audit logging with sidecar containers and audit-trail plugins, JCasC-based role permissions with separated controller and agent IAM roles, dedicated prerelease and sandbox Jenkins instances, EC2-based Docker build agents, and comprehensive implementation and usage documentation.</li>
               </ul>
               <div class="mt-4 flex flex-wrap gap-1.5">
                 <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">Jenkins</span>
                 <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">JCasC</span>
                 <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">Groovy</span>
-                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">EFS</span>
-                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">SAML</span>
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">ECS / EFS</span>
                 <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">Slack API</span>
               </div>
             </article>
 
             <article>
-              <h3 class="text-base font-semibold text-slate-900">Source-control migration &amp; pipeline quality</h3>
+              <h3 class="text-base font-semibold text-slate-900">Terraform refactoring &amp; distributed provisioning</h3>
               <ul class="mt-3 space-y-2 text-[15px] leading-relaxed text-slate-600">
-                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Led a zero-downtime migration from AWS CodeCommit to Bitbucket for 30+ developers ahead of AWS deprecation, rewiring pipelines, webhooks and access controls while maintaining 100% deployment continuity.</li>
-                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Wrote a Bitbucket Forge app that auto-generates per-repo pre-commit pipelines (formatting, linting, security scanning) from metadata. It replaced manual per-repo setup with one centrally managed framework and blocked unauthorized infrastructure changes in pull requests.</li>
-                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Migrated CI/CD from CodePipeline to Bitbucket Pipelines and Jenkins, enabling blue/green deployments with rollback support, and deployed self-hosted SonarQube for static analysis and security-standard enforcement in the pipeline.</li>
-                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Enabled a single repo to build and publish both Java and Python artifacts, and made schema and SDK publishing to CodeArtifact idempotent so re-runs stopped failing builds.</li>
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Led the first phase of a major Terraform refactoring: restructured the core repository, implemented central module versioning with S3-published versioned modules, defined the versioning policy and enabled versioned-module consumption across service repositories.</li>
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Built support for deploying infrastructure directly from service repositories through Jenkins, including destroy support and layered per-environment configuration overrides, exposing Terraform modules so service teams could provision their own infrastructure.</li>
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Migrated the data-orchestration stack (Step Functions, DynamoDB, queue-manager Lambda, state machine definitions) from CloudFormation to Terraform, removed circular dependencies and cleaned residual CloudFormation NAT, VPC-peering and S3-management resources.</li>
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Added pre-commit hooks with tfsec static analysis on Terraform repositories and built environment-cleanup automation for unused environments.</li>
               </ul>
               <div class="mt-4 flex flex-wrap gap-1.5">
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">Terraform</span>
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">Terragrunt</span>
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">tfsec</span>
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">Step Functions</span>
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">DynamoDB</span>
+              </div>
+            </article>
+
+            <article>
+              <h3 class="text-base font-semibold text-slate-900">Data platform: Glue, Athena &amp; DMS</h3>
+              <ul class="mt-3 space-y-2 text-[15px] leading-relaxed text-slate-600">
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Rolled out AWS Glue ETL infrastructure to production and prerelease: jobs, connections, Docker-based Lambda triggers and EventBridge schedules, with cross-region and cross-account migration automated through pipelines.</li>
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Built a Glue SDLC with multi-branch testing support, per-environment job naming, role and permission assignment, and cross-environment promotion workflows.</li>
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Solved shared-library access for Glue worker threads with a Lambda-based token-refresh pattern on EventBridge schedules against cross-account CodeArtifact, unblocking internal Python packages inside Glue jobs.</li>
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Built scheduled, Lambda-triggered Athena query automation on Glue tables and stood Athena up in production with data-lake permissions for BI dashboards, backup tables and cross-region query execution.</li>
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Set up DMS replication from the production delivery database to the analytics cluster for the reporting team, with Terraform provisioning, read-only users, validation tasks and monitoring.</li>
+              </ul>
+              <div class="mt-4 flex flex-wrap gap-1.5">
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">AWS Glue</span>
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">Athena</span>
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">AWS DMS</span>
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">CodeArtifact</span>
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">EventBridge</span>
+              </div>
+            </article>
+
+            <article>
+              <h3 class="text-base font-semibold text-slate-900">Kafka foundations (AWS MSK)</h3>
+              <ul class="mt-3 space-y-2 text-[15px] leading-relaxed text-slate-600">
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Provisioned the first AWS MSK cluster through Terraform with CloudWatch logging, storage autoscaling, provisioned throughput, IAM authentication and security hardening.</li>
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Created reusable Terraform modules for per-service Kafka topic deployment with Terragrunt and MSK IAM auth, and stood up Glue Schema Registry for Kafka schema management with Jenkins pipeline integration.</li>
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Deployed the Kafbat management dashboard on ECS with authentication, and configured IAM roles, KMS encryption and Secrets Manager access for MSK across development accounts.</li>
+              </ul>
+              <div class="mt-4 flex flex-wrap gap-1.5">
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">AWS MSK</span>
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">Kafka</span>
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">Terraform</span>
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">KMS</span>
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">Secrets Manager</span>
+              </div>
+            </article>
+
+            <article>
+              <h3 class="text-base font-semibold text-slate-900">Security tooling overhaul &amp; compliance</h3>
+              <ul class="mt-3 space-y-2 text-[15px] leading-relaxed text-slate-600">
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Led SOC 2 audit evidence preparation, producing 17 artifacts covering edit checks, backup-restoration testing, audit logs, user and admin listings, password configuration, network diagrams, firewall rulesets, system inventory, patch management, encryption, de-identification, segmentation and change-control alerting.</li>
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Implemented a managed SIEM/MDR integration (CyberMaxx): canary server, SFTP agent, SentinelOne Linux agents, S3 log storage, vulnerability scanning configuration and GuardDuty findings export, and ran a formal evaluation of Plerion (CSPM/CIEM/CWPP) as a replacement for the legacy managed-security provider.</li>
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Extended GuardDuty runtime monitoring across all ECS tasks, services and EC2 instances with alarm integration, attached WAF to the production CloudFront distribution and implemented malicious-IP blocking on the platform.</li>
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Remediated vulnerabilities across 7+ infrastructure repositories and container registries, worked through Prowler findings (IAM policies, API Gateway logging, EFS backups) and enforced IAM permission boundaries, restricted infrastructure-admin user creation and cleaned unused roles and policies.</li>
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Ran the annual penetration-test cycle and firewall-ruleset, security-group and network-diagram reviews for IT security compliance, and maintained the PHI de-identification pipelines protecting non-production environments.</li>
+              </ul>
+              <div class="mt-4 flex flex-wrap gap-1.5">
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">SOC 2</span>
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">CyberMaxx</span>
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">SentinelOne</span>
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">GuardDuty</span>
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">Plerion</span>
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">Prowler</span>
+              </div>
+            </article>
+
+            <article>
+              <h3 class="text-base font-semibold text-slate-900">Cloud infrastructure, contact center &amp; secure transfer</h3>
+              <ul class="mt-3 space-y-2 text-[15px] leading-relaxed text-slate-600">
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Redesigned production infrastructure for a step change in inbound document (fax) load: auto-scaling, queue-based architecture and resource rebalancing across ECS services.</li>
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Built and launched AWS Connect contact-center infrastructure to production: API Gateway and Lambda integrations, CSP headers for iframe embedding, live-monitoring integration, Kinesis streams and QuickSight data-lake connectivity.</li>
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Ran secure browser-based virtual desktops (WorkSpaces Web) with SAML relay-state configuration supporting 150+ concurrent agent sessions, and led infrastructure and certificate work (key generation, CSR, keystore extraction) for certification with the national e-prescribing directory network.</li>
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Deployed AWS Transfer Family SFTP through Terraform with S3 backends, per-user IAM and SSH key management, and handled ongoing vendor onboarding and offboarding for external data partners, consolidating users by data provider with SSM-based automation and S3 lifecycle and replication rules.</li>
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Executed a broad cost-optimization pass: EBS snapshot and AMI cleanup, EBS encryption by default, unused EIP and volume removal, Parameter Store cleanup across four account-regions with S3 backups, backup-retention audits and teardown of legacy environments, plus automated DB-permission synchronization after production restores and de-identified views over PHI tables.</li>
+              </ul>
+              <div class="mt-4 flex flex-wrap gap-1.5">
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">Amazon Connect</span>
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">ECS Fargate</span>
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">Transfer Family</span>
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">WorkSpaces Web</span>
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">Aurora</span>
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">Cost optimization</span>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ 2024 ============ -->
+      <section id="y2024" class="scroll-mt-16 border-t border-sage-border py-14">
+        <div class="md:grid md:grid-cols-[180px_1fr] md:gap-10">
+          <div class="mb-8 md:mb-0">
+            <div class="mb-3 h-1 w-8 rounded-full bg-forest"></div>
+            <h2 class="text-2xl font-bold tracking-tight text-slate-900">2024</h2>
+            <p class="mt-2 text-sm leading-relaxed text-forest-soft">Fargate migration, disaster recovery, secure file transfer and a comprehensive monitoring framework.</p>
+          </div>
+          <div class="space-y-11">
+
+            <article>
+              <h3 class="text-base font-semibold text-slate-900">Containerization &amp; Fargate migration</h3>
+              <ul class="mt-3 space-y-2 text-[15px] leading-relaxed text-slate-600">
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Led the end-to-end migration of data-processing workloads from EC2 to ECS Fargate tasks running in private subnets, improving security posture and cutting operational overhead.</li>
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Dockerized the PDF-generation, fax-receiving and fax-processing Lambdas and the automated response service, and built a centralized Docker image build project with a shared IAM role, standardizing image creation and replication across environments.</li>
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Configured Fargate task definitions for contact, pharmacy and claims ingestion, eligibility sync and pricing workloads, with event-based and scheduled EventBridge triggers replacing brittle cron scheduling.</li>
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Hardened ECS: blocked EC2 metadata access for bridge-mode containers, disabled privileged mode and restricted task-execution IAM, and integrated Grafana Alloy sidecars for observability on every Fargate process.</li>
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Drove compute strategy with comparative Fargate-vs-EC2 and Lambda-vs-Fargate analyses, and managed the Docker 25 upgrade on Amazon Linux 2 alongside ECR event changes.</li>
+              </ul>
+              <div class="mt-4 flex flex-wrap gap-1.5">
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">ECS Fargate</span>
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">Docker</span>
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">ECR</span>
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">EventBridge</span>
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">Grafana Alloy</span>
+              </div>
+            </article>
+
+            <article>
+              <h3 class="text-base font-semibold text-slate-900">CI/CD &amp; source-control migration</h3>
+              <ul class="mt-3 space-y-2 text-[15px] leading-relaxed text-slate-600">
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Built and maintained CodePipeline, CodeBuild and CodeDeploy pipelines for every application component: platform frontend and backend, member-facing portal, automated response service, data projects, PDF generation, event feeds, fill workflow, client data ingestion and formulary ingestion.</li>
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Led the zero-downtime migration from AWS CodeCommit to Bitbucket for 30+ developers ahead of AWS deprecation, rewiring pipelines, webhooks and access controls while keeping deployments running throughout.</li>
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Created cross-account replication pipelines synchronizing code between development and production accounts, plus branch-specific deployment pipelines for test, QA, staging, prerelease and production.</li>
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Integrated SonarQube static analysis at both feature-branch commit and QA deployment stages, moved the shared Python libraries to CodeArtifact and pointed all Fargate data projects at it, and cut CodeDeploy storage with archive retention policies.</li>
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Automated the nightly de-identified production database dump pipeline on EventBridge schedules, including restoration into the development database.</li>
+              </ul>
+              <div class="mt-4 flex flex-wrap gap-1.5">
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">CodePipeline</span>
                 <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">Bitbucket</span>
-                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">Bitbucket Forge</span>
-                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">Pre-commit</span>
                 <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">SonarQube</span>
                 <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">CodeArtifact</span>
               </div>
             </article>
 
             <article>
-              <h3 class="text-base font-semibold text-slate-900">Automation &amp; self-service tooling</h3>
+              <h3 class="text-base font-semibold text-slate-900">Security, compliance &amp; penetration testing</h3>
               <ul class="mt-3 space-y-2 text-[15px] leading-relaxed text-slate-600">
-                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Developed CLI and Python automation for self-service workflows covering environment setup, database restores, SFTP user management and deployment orchestration, which boosted release velocity across teams.</li>
-                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Automated fleet patching and operations with SSM Run Command and ASG instance auto-refresh to remove manual maintenance overhead, and added first-class support for scheduled workloads through Terraform modules and Jenkins templates for Fargate scheduled tasks and EventBridge rules.</li>
-                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Cut an S3 cleanup Lambda from one API call per file to batched deletes, roughly a 1000x reduction in calls, which eliminated timeouts on large runs. Automated Athena partition repair at scale with a Lambda and SQS pattern issuing MSCK REPAIR against Glue tables.</li>
-                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Automated data-processing server start and stop with Lambda and EventBridge, eliminating idle off-hours compute cost.</li>
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Ran comprehensive IAM security reviews, restricting overly permissive roles across application stacks and enforcing least privilege for CloudFormation, Lambda, CodePipeline, EC2 instance profiles and S3 bucket policies, with 90-day access-key rotation enforced.</li>
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Enforced IMDSv2 fleet-wide against SSRF credential theft, enabled SNS and SQS encryption everywhere, enabled ECR scan-on-push, moved S3 access control fully to IAM policies and geo-restricted CloudFront distributions.</li>
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Implemented Content Security Policy headers on the platform and patient-advocacy applications with violation-report analysis, and tuned WAF web ACLs to protect backend services without blocking legitimate inbound document traffic.</li>
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Provisioned and tore down the annual penetration-test environment, supported SOC 2 preparation with compliance reports and production-account evidence, and ran quarterly Prowler and CloudMapper reviews with full remediation of flagged findings.</li>
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Hardened the SFTP estate with restricted security groups and fail2ban intrusion prevention, and kept regular IAM hygiene cycles removing unused users, groups and keys.</li>
               </ul>
               <div class="mt-4 flex flex-wrap gap-1.5">
-                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">Python</span>
-                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">Bash</span>
-                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">SSM</span>
-                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">Lambda</span>
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">IAM</span>
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">IMDSv2</span>
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">AWS WAF / CSP</span>
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">SOC 2</span>
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">Prowler / CloudMapper</span>
+              </div>
+            </article>
+
+            <article>
+              <h3 class="text-base font-semibold text-slate-900">Networking &amp; cloud architecture</h3>
+              <ul class="mt-3 space-y-2 text-[15px] leading-relaxed text-slate-600">
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Designed VPC architectures across three regions with public and private subnets, route tables, NACLs, NAT gateways and VPC peering, enforcing strict ingress and egress filtering and eliminating default security-group rules in every VPC.</li>
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Managed ALBs and NLBs for platform services, the eligibility API and SFTP transfer, built API Gateway endpoints with custom domain mapping, implemented VPC endpoints for private AWS connectivity and ran CloudFront with security headers and WAF integration.</li>
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Implemented multi-AZ NAT architecture for high availability and migrated international developer workspaces to the Singapore region with VPC peering, database whitelisting and rebuilt workspace images.</li>
+              </ul>
+              <div class="mt-4 flex flex-wrap gap-1.5">
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">VPC</span>
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">ALB / NLB</span>
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">API Gateway</span>
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">CloudFront</span>
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">Route 53</span>
+              </div>
+            </article>
+
+            <article>
+              <h3 class="text-base font-semibold text-slate-900">Databases &amp; data operations</h3>
+              <ul class="mt-3 space-y-2 text-[15px] leading-relaxed text-slate-600">
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Managed Aurora PostgreSQL clusters across development, staging, prerelease and production, upgraded staging from burstable T3 to memory-optimized R6g instances and maintained Flyway-based schema migrations.</li>
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Maintained the automated de-identified production dump pipeline with PHI anonymization (age, gender, birth date) and archive-schema exclusion so PHI never reaches development, plus backup-validation pipelines with automated restoration testing.</li>
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Built DMS-based ETL pipelines, ran ElastiCache (Redis) with disaster-recovery and persistence configuration, deployed OpenSearch domains with application log integration, researched column-level encryption and stood up QuickSight for business-intelligence dashboards.</li>
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Created isolated database environments for enterprise-client evaluations and cleaned insecure legacy Glue database connections.</li>
+              </ul>
+              <div class="mt-4 flex flex-wrap gap-1.5">
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">Aurora PostgreSQL</span>
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">AWS DMS</span>
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">ElastiCache</span>
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">Flyway</span>
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">PHI de-identification</span>
+              </div>
+            </article>
+
+            <article>
+              <h3 class="text-base font-semibold text-slate-900">Monitoring &amp; observability framework</h3>
+              <ul class="mt-3 space-y-2 text-[15px] leading-relaxed text-slate-600">
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Built a comprehensive CloudWatch monitoring framework: ALB health, RDS metrics, EC2 and Lambda memory utilization, ECS task-state changes and platform API performance, with Slack routing for development and automatic Jira ticket creation for production alerts.</li>
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Implemented CIS-compliant CloudTrail log monitoring with metric filters across 15+ security event categories, and standardized log lifecycle management (30-day retention in development, 13 months in production).</li>
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Deployed Grafana and Grafana Alloy for container observability, configured memory-metric collection on the platform API fleet, built Lambda memory alarms from Logs Insights queries and resolved the SNS-encryption issue that had been silently dropping Slack alerts.</li>
+              </ul>
+              <div class="mt-4 flex flex-wrap gap-1.5">
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">CloudWatch</span>
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">Grafana Alloy</span>
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">CIS monitoring</span>
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">SNS / Slack / Jira</span>
+              </div>
+            </article>
+
+            <article>
+              <h3 class="text-base font-semibold text-slate-900">SFTP, disaster recovery &amp; cost</h3>
+              <ul class="mt-3 space-y-2 text-[15px] leading-relaxed text-slate-600">
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Deployed AWS Transfer Family SFTP with a VPC endpoint, NLB, elastic IPs and private-subnet architecture, ran the self-hosted SFTP server with automated user management via Parameter Store keys, and delivered traffic-based monitoring with monthly uptime reporting for client SLAs.</li>
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Managed vendor SFTP access end to end: IP whitelisting, public-key setup and security groups for eligibility, pricing and formulary data feeds, and reorganized S3 storage with proper bucket policies and lifecycle rules.</li>
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Defined and implemented the organization's disaster-recovery strategy across all infrastructure layers: AWS Backup policies with automated validation, cross-region replication for production resources, semi-annual business-continuity exercises and termination protection on critical stacks, clusters and instances.</li>
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Reduced spend by moving support agents from full WorkSpaces to WorkSpaces Web, optimizing CloudTrail retention and cleaning deprecated Lambdas, old stacks and legacy repositories; also built customer ingestion pipelines (CDI) on Fargate with S3 triggers and onboarded new enterprise-client environments end to end.</li>
+              </ul>
+              <div class="mt-4 flex flex-wrap gap-1.5">
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">Transfer Family</span>
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">AWS Backup</span>
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">RTO / RPO</span>
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">Cost optimization</span>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ 2023 ============ -->
+      <section id="y2023" class="scroll-mt-16 border-t border-sage-border py-14">
+        <div class="md:grid md:grid-cols-[180px_1fr] md:gap-10">
+          <div class="mb-8 md:mb-0">
+            <div class="mb-3 h-1 w-8 rounded-full bg-forest"></div>
+            <h2 class="text-2xl font-bold tracking-tight text-slate-900">2023</h2>
+            <p class="mt-2 text-sm leading-relaxed text-forest-soft">Terraform adoption from zero, ECS microservices, environment engineering at scale.</p>
+          </div>
+          <div class="space-y-11">
+
+            <article>
+              <h3 class="text-base font-semibold text-slate-900">Terraform framework, built from the ground up</h3>
+              <ul class="mt-3 space-y-2 text-[15px] leading-relaxed text-slate-600">
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Ran the Terraform-vs-CDK evaluation and set the organization's infrastructure-as-code direction, then designed and implemented the Terraform + Terragrunt framework from scratch: repository structure, S3 backend state management and deployment pipelines with manual approval gates.</li>
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Migrated core infrastructure management from CloudFormation to Terraform-managed resources, solving module-deletion handling and establishing shared and common resource patterns, with static analysis on all Terraform repositories.</li>
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Refactored the legacy CloudFormation repository in parallel: separated utility projects, parameterized subnets, VPCs and security groups, standardized environment tagging and restructured deployment repositories under clear naming conventions.</li>
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Managed the full estate as code: VPCs, ALBs, NLBs, Aurora clusters, EC2, Lambda, SQS, S3, Cognito, Route 53, CloudFront, ElastiCache and OpenSearch.</li>
+              </ul>
+              <div class="mt-4 flex flex-wrap gap-1.5">
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">Terraform</span>
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">Terragrunt</span>
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">CloudFormation</span>
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">S3 state</span>
+              </div>
+            </article>
+
+            <article>
+              <h3 class="text-base font-semibold text-slate-900">ECS microservices &amp; container platform</h3>
+              <ul class="mt-3 space-y-2 text-[15px] leading-relaxed text-slate-600">
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Migrated the patient-advocacy application from EC2 to ECS with Fargate capacity providers: blue/green and rolling deployment strategies, automatic rollback, container health checks, sticky sessions, ALB integration, autoscaling and Container Insights.</li>
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Deployed a discount-pricing service as a fully containerized ECS/Fargate workload with weekly EventBridge Scheduler runs and S3 event-triggered file ingestion, and shipped a formulary-ingestion service as Fargate tasks provisioned through Terraform with private-subnet networking.</li>
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Built Dockerized Lambda functions (PDF generation with deduplicated SQS queues), migrated Lambda@Edge runtimes from Node.js 12 to 18 and automated Docker image builds into the backend pipelines.</li>
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Enforced container security best practices: blocked instance-metadata access in bridge networking, disabled privileged mode, ran containers under restricted IAM roles and automated old-image cleanup on hosts.</li>
+              </ul>
+              <div class="mt-4 flex flex-wrap gap-1.5">
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">ECS Fargate</span>
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">Blue/green deployments</span>
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">Docker</span>
                 <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">EventBridge</span>
               </div>
             </article>
 
             <article>
-              <h3 class="text-base font-semibold text-slate-900">Glue data-platform SDLC</h3>
+              <h3 class="text-base font-semibold text-slate-900">Environment engineering &amp; multi-tenant provisioning</h3>
               <ul class="mt-3 space-y-2 text-[15px] leading-relaxed text-slate-600">
-                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Built a full Glue ETL SDLC with automated job deployment, connection sync, database sync and multi-script jobs, plus tooling for cross-account and cross-region job migration.</li>
-                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Solved worker-thread dependency resolution by replacing manual wheel uploads with automated requirements-based installs, which unblocked shared-library use inside Glue jobs.</li>
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Built the prerelease environment end to end (VPC, Aurora cluster, ALB, platform, data projects, eligibility API, WAF, Cognito, Parameter Store) plus a secondary prerelease tier with full infrastructure parity.</li>
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Designed on-demand environment creation tooling: parameterized deployments with dropdown project selection, confirmation prompts, synthetic datasets, automated buildspec updates and runbooks, so a full test environment became a self-service operation.</li>
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Provisioned and ran dedicated environments for enterprise health-plan and pharmacy clients through their full lifecycle, and managed sandbox, demo, acceptance, QA and integration environments across regions, including migrations and standardized renames.</li>
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Introduced deployment maps keyed on infrastructure and region, migrated all pipelines onto them, split the platform deployment into separate API and backend-jobs pipelines for granular releases and enforced master merge-back checks that blocked deployments from unmerged branches.</li>
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Migrated source control from CodeCommit to Bitbucket: Codestar connections, pipeline rewiring and decommissioning of legacy repositories and replication pipelines, plus pipeline-failure alarms and Slack/Jira notifications on infrastructure process failures.</li>
               </ul>
               <div class="mt-4 flex flex-wrap gap-1.5">
-                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">AWS Glue</span>
-                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">Athena</span>
-                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">SQS</span>
-                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">CI/CD</span>
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">CodePipeline</span>
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">Bitbucket</span>
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">Aurora</span>
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">Cognito</span>
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">WAF</span>
               </div>
             </article>
 
-          </div>
-        </div>
-      </section>
-
-      <!-- ============ SECURITY & COMPLIANCE ============ -->
-      <section id="security" class="scroll-mt-16 border-t border-sage-border py-14">
-        <div class="md:grid md:grid-cols-[180px_1fr] md:gap-10">
-          <div class="mb-8 md:mb-0">
-            <div class="mb-3 h-1 w-8 rounded-full bg-forest"></div>
-            <h2 class="text-2xl font-bold tracking-tight text-slate-900">Security &amp; Compliance</h2>
-          </div>
-          <div class="space-y-11">
-
             <article>
-              <h3 class="text-base font-semibold text-slate-900">SOC 2 &amp; penetration testing</h3>
+              <h3 class="text-base font-semibold text-slate-900">Security &amp; compliance engineering</h3>
               <ul class="mt-3 space-y-2 text-[15px] leading-relaxed text-slate-600">
-                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Owned the infrastructure side of compliance across 5 consecutive SOC 2 audit cycles, producing evidence for access control, network segmentation, encryption, patching, vulnerability scanning, backup-restore testing and audit logging, and maintaining continuous compliance monitoring between cycles.</li>
-                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Led annual third-party penetration tests and remediated findings to reach clean audit reports each cycle, which included standing up full production-mirror test environments and cleanly tearing them down afterward with zero production impact.</li>
-                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Enforced AWS Well-Architected Framework, CIS and NIST benchmarks, and implemented data-protection controls for PII and PHI across application layers in alignment with SOC 2 and HIPAA.</li>
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Implemented Content Security Policy headers, first report-only and then enforced, across the platform frontend and backend, patient-advocacy application and member portal, with a violation-reporting service for tuning.</li>
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Conducted an estate-wide IAM permissions analysis, restricting every role to least privilege across the application stack, member portal, data projects, utilities, SFTP and core infrastructure.</li>
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Hardened security groups across production and development: eliminated wide-open CIDR ranges, blocked public access to database and cache ports and restricted platform access to managed virtual desktops only, with geo-locked prerelease environments.</li>
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Led penetration-test preparation and remediation across two cycles: isolated test environments, Prowler, CloudMapper and ZAP finding remediation and post-engagement cleanup; prepared the SOC audit with termination protection, ALB access logs and production IAM cleanup.</li>
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Automated the managed security agent lifecycle on ECS and EC2 scale events, enforced IMDSv2 and CIS-conformant AMIs across all instances, and responded to a steady stream of CIS security-control alerts covering security-group, VPC, gateway and NACL changes in production.</li>
               </ul>
               <div class="mt-4 flex flex-wrap gap-1.5">
-                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">SOC 2</span>
-                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">HIPAA</span>
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">CSP</span>
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">IAM least privilege</span>
                 <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">Penetration testing</span>
                 <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">CIS Benchmarks</span>
-                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">NIST</span>
-              </div>
-            </article>
-
-            <article>
-              <h3 class="text-base font-semibold text-slate-900">Threat detection &amp; monitoring tooling</h3>
-              <ul class="mt-3 space-y-2 text-[15px] leading-relaxed text-slate-600">
-                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Rolled out SentinelOne EDR and GuardDuty runtime monitoring across EC2, ECS and the workspace fleet for continuous threat detection, with IDS/IPS coverage, and centralized security telemetry in Elastic SIEM with secrets-audit logs in CloudWatch.</li>
-                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Ran a formal evaluation and replaced the legacy managed-security provider (Armor) with a modern MDR platform (CyberMaxx, assessed against Plerion), then opened the production VPC estate to authenticated vulnerability scanning through Greenbone.</li>
-                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Automated security scans for IaC, Docker and source code using Prowler, CloudMapper, tfsec, OWASP ZAP and Hadolint, remediating findings across the board, and hardened the production platform with WAF-based malicious-IP blocking.</li>
-              </ul>
-              <div class="mt-4 flex flex-wrap gap-1.5">
-                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">GuardDuty</span>
-                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">SentinelOne</span>
-                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">Elastic SIEM</span>
-                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">AWS WAF</span>
-                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">Prowler</span>
-                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">CloudMapper</span>
-                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">tfsec</span>
                 <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">OWASP ZAP</span>
               </div>
             </article>
 
             <article>
-              <h3 class="text-base font-semibold text-slate-900">Identity, access &amp; hardening</h3>
+              <h3 class="text-base font-semibold text-slate-900">Database engineering &amp; data pipelines</h3>
               <ul class="mt-3 space-y-2 text-[15px] leading-relaxed text-slate-600">
-                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Implemented least-privilege IAM at scale with permission boundaries, role and group restructuring, removal of standing admin access and separation of duties across dev and production accounts. Architected layered controls with fine-grained IAM policies, KMS encryption and network segmentation.</li>
-                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Rolled out the full CIS AWS Foundations Benchmark alarm suite covering unauthorized API calls, non-MFA sign-ins, root usage and IAM, CloudTrail and S3-policy changes. Built CIS Level 1 conformant AMIs, enforced MFA on Cognito pools and IAM, and added CSP and HTTP security headers across backend applications.</li>
-                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Enforced IMDSv2 to block SSRF-based role hijacking, encrypted SNS, SQS and S3 with KMS, migrated S3 access control from ACLs to bucket policies, geo-restricted CloudFront and hardened containers to run non-root with no privileged mode and blocked instance-metadata access.</li>
-                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Configured CloudTrail, VPC Flow Logs, IAM permission boundaries and network ACLs for auditing and to restrict lateral movement, and eliminated noisy false-positive alerts from no-op security-group updates on every deploy.</li>
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Built and ran the production-to-prerelease dump pipeline with PHI/PII de-identification scripts, failure alerting to Slack and configurable restoration supporting minimal and full schemas.</li>
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Implemented on-demand database backup and restore automation with confirmation prompts, concurrent-execution blocking, EFS-backed storage and improved logging, and separated reporting workloads into a dedicated database.</li>
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Managed Aurora PostgreSQL fleets across every environment: reader instances, 300&nbsp;GiB+ storage scaling, standalone-RDS-to-Aurora migrations, cross-region database moves, configuration tuning with safe rollback and PostgreSQL logging on development databases.</li>
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Ran a DMS proof of concept for replication strategy, published shared Python utilities to CodeArtifact with automated distribution across data projects, and rolled Python 3.11 onto the data-processing and eligibility API servers.</li>
+              </ul>
+              <div class="mt-4 flex flex-wrap gap-1.5">
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">Aurora PostgreSQL</span>
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">pg_dump</span>
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">PHI de-identification</span>
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">CodeArtifact</span>
+              </div>
+            </article>
+
+            <article>
+              <h3 class="text-base font-semibold text-slate-900">Networking, HA &amp; observability</h3>
+              <ul class="mt-3 space-y-2 text-[15px] leading-relaxed text-slate-600">
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Designed multi-AZ NAT for high availability after a formal gateway-vs-instance trade-off analysis, managed a peered multi-VPC estate across two regions and moved all Fargate tasks into private subnets behind NAT gateways.</li>
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Stood up the AWS Transfer Family SFTP service with NLB, per-user S3 IAM roles, DNS records and IP whitelisting, and configured nginx reverse-proxying and upload-size limits for platform services.</li>
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Built a comprehensive CloudWatch alarm system: ALB, NLB, NAT, Aurora storage, CPU with surplus-credit tracking, disk-space thresholds, pipeline failures and heartbeat monitoring with health-check endpoints for instances without load balancers.</li>
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Deployed Grafana agents for metrics collection, enabled Container Insights with container-level alerts, piloted DevOps Guru for RDS and cut CloudWatch costs by stripping unnecessary metric dimensions and setting retention policies.</li>
+              </ul>
+              <div class="mt-4 flex flex-wrap gap-1.5">
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">VPC / NAT</span>
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">Transfer Family</span>
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">CloudWatch</span>
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">Grafana</span>
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">nginx</span>
+              </div>
+            </article>
+
+            <article>
+              <h3 class="text-base font-semibold text-slate-900">Self-hosted tooling, new services &amp; operations</h3>
+              <ul class="mt-3 space-y-2 text-[15px] leading-relaxed text-slate-600">
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Evaluated, deployed and operated a self-hosted Bitwarden password manager on EC2 with Docker, EFS primary storage and an Aurora-hosted database, including organizational setup, user management, disabled self-registration, automated service recovery and disaster-recovery handling.</li>
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Built the eligibility API infrastructure end to end (VPC, ALB, EC2, WAF, nginx, CIS-compliant AMIs and pipelines) into prerelease and production, and delivered infrastructure for a point-of-purchase notification MVP, a metrics MVP and a pricing service.</li>
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Upgraded Java to Corretto 17 across the platform and patient-advocacy application (AMIs, Dockerfiles, buildspecs), Node.js to 16 for the member portal, tuned JVM heap on scaled production instances and added Redis caching with persistence.</li>
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Ran reserved-instance analysis and two rounds of estate-wide right-sizing, cleaned unused databases, distributions and legacy environments, ran the IT security compliance server (quarterly diagrams, BCP reviews, firewall audits) and resolved production incidents from database failures to emergency WAF tuning.</li>
+              </ul>
+              <div class="mt-4 flex flex-wrap gap-1.5">
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">Bitwarden</span>
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">Java 17</span>
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">ElastiCache</span>
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">Cost optimization</span>
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">Incident response</span>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ 2022 ============ -->
+      <section id="y2022" class="scroll-mt-16 border-t border-sage-border py-14">
+        <div class="md:grid md:grid-cols-[180px_1fr] md:gap-10">
+          <div class="mb-8 md:mb-0">
+            <div class="mb-3 h-1 w-8 rounded-full bg-forest"></div>
+            <h2 class="text-2xl font-bold tracking-tight text-slate-900">2022</h2>
+            <p class="mt-2 text-sm leading-relaxed text-forest-soft">Account isolation, CIS compliance across the board and the data de-identification pipeline.</p>
+          </div>
+          <div class="space-y-11">
+
+            <article>
+              <h3 class="text-base font-semibold text-slate-900">AWS development-account migration</h3>
+              <ul class="mt-3 space-y-2 text-[15px] leading-relaxed text-slate-600">
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Led the end-to-end migration of development infrastructure out of the shared production account into a dedicated AWS account, following account-isolation best practice, with IAM users, password policies and security configuration matching production standards from day one.</li>
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Migrated Aurora clusters cross-account through AWS Backup with CMK-encrypted snapshot sharing, moved S3 data with batch operations, transferred Parameter Store entries across both regions and migrated Cognito user pools with full user export and import.</li>
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Built cross-account code-replication pipelines keeping repositories synchronized between production and development, redeployed the core infrastructure, security, application and data stacks in the new account and stood up staging infrastructure in a second region.</li>
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Moved Aurora cluster management out of CloudFormation for safe PostgreSQL major-version upgrades and upgraded staging from burstable to memory-optimized instances with controlled writer failover.</li>
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Executed the post-migration cleanup of the production account: deleted all development stacks, servers and log groups, removed 50+ orphaned IAM policies and 75+ stale roles, purged development buckets, keys, pools and snapshots, shrinking production's blast radius and cost.</li>
+              </ul>
+              <div class="mt-4 flex flex-wrap gap-1.5">
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">Multi-account AWS</span>
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">AWS Backup</span>
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">KMS</span>
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">Cognito</span>
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">S3 batch operations</span>
+              </div>
+            </article>
+
+            <article>
+              <h3 class="text-base font-semibold text-slate-900">CIS benchmark implementation &amp; remediation</h3>
+              <ul class="mt-3 space-y-2 text-[15px] leading-relaxed text-slate-600">
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Implemented the full CIS AWS Foundations Benchmark, deploying 11 CloudTrail-driven metric filters and alarms via CloudFormation with SNS integration: unauthorized API calls, root usage, non-MFA sign-ins, IAM and CloudTrail changes, S3-policy, security-group, NACL, gateway, route-table and VPC changes and KMS key deletion.</li>
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Remediated every finding from multiple Prowler audits: encrypted all SNS topics and SQS queues, closed unrestricted ingress on sensitive ports, rotated stale IAM keys, disabled unused credentials, fixed policy-attachment hygiene and released unused elastic IPs.</li>
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Closed out CloudMapper findings: enforced IMDSv2 fleet-wide against SSRF metadata attacks, replaced deprecated managed policies, moved S3 access control to policies, made ECR repositories private and tightened permission boundaries and admin-capable custom policies.</li>
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Rebuilt CloudTrail as infrastructure-as-code: multi-region trail with log-file integrity validation, encrypted S3 storage, CloudWatch Logs integration and an Athena table for querying, and implemented CloudFront geo-restrictions per environment.</li>
+              </ul>
+              <div class="mt-4 flex flex-wrap gap-1.5">
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">CIS Benchmarks</span>
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">CloudTrail</span>
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">Prowler</span>
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">CloudMapper</span>
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">IMDSv2</span>
+              </div>
+            </article>
+
+            <article>
+              <h3 class="text-base font-semibold text-slate-900">CIS-compliant AMI engineering</h3>
+              <ul class="mt-3 space-y-2 text-[15px] leading-relaxed text-slate-600">
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Created CIS Level 1 compliant AMIs for every server class (application, data processing, NAT, automated response) using EC2 Image Builder, resolving 35 high-severity AWS Inspector findings on the base image alone.</li>
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Replaced the error-prone manual AMI process with automated Image Builder pipelines and shared hardened images across accounts and regions, with encryption applied at instance launch.</li>
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Closed penetration-test findings at the OS layer: upgraded OpenSSH, corrected home-directory permissions to CIS spec and automated stale-kernel cleanup that had been generating false vulnerability reports.</li>
+              </ul>
+              <div class="mt-4 flex flex-wrap gap-1.5">
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">EC2 Image Builder</span>
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">AWS Inspector</span>
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">CIS Level 1</span>
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">Linux hardening</span>
+              </div>
+            </article>
+
+            <article>
+              <h3 class="text-base font-semibold text-slate-900">CI/CD engineering &amp; the de-identification pipeline</h3>
+              <ul class="mt-3 space-y-2 text-[15px] leading-relaxed text-slate-600">
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Designed pre-release deployment pipelines enabling PHI testing on dedicated infrastructure before production, replacing a manual, error-prone database-pointing process, and built deployment pipelines for an ML-based auto-response project covering both code and model artifacts.</li>
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Engineered the automated production-data de-identification pipeline: scheduled dump creation, PHI scrubbing (including age, gender and birth date), archive-schema exclusion to prevent PHI leakage, automated restoration to a permanent development database and safety switches disabling outbound data feeds in de-identified copies.</li>
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Built automated backup-restoration validation with ECR-hosted Docker containers and failure notifications, plus a prerelease database pipeline restoring production dumps for realistic testing.</li>
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Integrated SonarQube into CodePipeline at two levels (feature-branch commits and QA builds), fixed Lambda image-versioning and memory issues, enabled ECR scan-on-push and trimmed pipeline costs by dropping unnecessary CloudFront invalidations and CodeDeploy archives.</li>
+              </ul>
+              <div class="mt-4 flex flex-wrap gap-1.5">
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">CodePipeline</span>
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">PHI de-identification</span>
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">SonarQube</span>
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">Docker / ECR</span>
+              </div>
+            </article>
+
+            <article>
+              <h3 class="text-base font-semibold text-slate-900">Penetration-test environment</h3>
+              <ul class="mt-3 space-y-2 text-[15px] leading-relaxed text-slate-600">
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Stood up a complete production-mirror test environment for the annual penetration test: Aurora cluster, hardened AMIs for every server type, Cognito, SFTP, NAT, application and data stacks, repository replication pipelines and a de-identified production dataset.</li>
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Parameterized resource naming to avoid conflicts with live production, then performed the full post-engagement teardown with zero production impact.</li>
+              </ul>
+              <div class="mt-4 flex flex-wrap gap-1.5">
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">Penetration testing</span>
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">Aurora</span>
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">CloudFormation</span>
+              </div>
+            </article>
+
+            <article>
+              <h3 class="text-base font-semibold text-slate-900">Virtual desktops &amp; PHI access control</h3>
+              <ul class="mt-3 space-y-2 text-[15px] leading-relaxed text-slate-600">
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Migrated contractor workspaces from the US to Singapore to cut latency: full impact analysis (VPC peering, database access, geo-restrictions), regional infrastructure via CloudFormation, cross-region image copies and refreshed developer tooling bundles.</li>
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Implemented WorkSpaces Web for call-center agents as a cost-effective alternative to full WorkSpaces after evaluating AppStream 2.0, with SAML SSO, a NAT-controlled VPC and a branded custom domain through API Gateway with TLS 1.2.</li>
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Enforced workspace security for PHI handling: IP whitelisting for developers, QA and agents, one-way clipboard restrictions, USB and printing disabled and strict password policies, plus dynamic IP-whitelisting functionality built into the platform itself.</li>
+              </ul>
+              <div class="mt-4 flex flex-wrap gap-1.5">
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">WorkSpaces</span>
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">WorkSpaces Web</span>
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">SAML SSO</span>
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">API Gateway</span>
+              </div>
+            </article>
+
+            <article>
+              <h3 class="text-base font-semibold text-slate-900">Customer environments, data pipelines &amp; monitoring</h3>
+              <ul class="mt-3 space-y-2 text-[15px] leading-relaxed text-slate-600">
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Provisioned full production environments for enterprise retail-pharmacy and health-plan clients: production-grade application servers, memory-optimized Aurora databases, baseline platform software and initialized formulary, plan and client-configuration data, with Cognito pools and ingestion scripts per client.</li>
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Built a data orchestration pipeline chaining client data ingestion, target pricing, supply analysis and dynamic switching modules, converted heavyweight Spark import jobs to SQL-based processing, and fixed S3 listing and Spark memory failures in high-volume customer imports.</li>
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Managed application cloud services: OpenSearch with alarms on cluster health and storage, FIFO SQS queues for ML workloads, SES production access, QuickSight with database connectivity, Redis session caching with single-active-session enforcement and evaluated AWS Transfer Family for managed SFTP.</li>
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Routed development alarms to Slack and production alarms into Jira tickets and email, set log lifecycle policies, standardized log-group naming, diagnosed the KMS-encryption issue silently breaking Slack alerts and resolved a production outage by adding ALB healthy-host alarms and automatic application recovery on reboot.</li>
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Enabled termination protection on all production stacks, clusters and instances, and fixed a Cognito pagination bug that was causing infinite loops and escalating API costs.</li>
+              </ul>
+              <div class="mt-4 flex flex-wrap gap-1.5">
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">Aurora</span>
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">OpenSearch</span>
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">SQS / SES</span>
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">QuickSight</span>
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">ElastiCache</span>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ 2021 ============ -->
+      <section id="y2021" class="scroll-mt-16 border-t border-sage-border py-14">
+        <div class="md:grid md:grid-cols-[180px_1fr] md:gap-10">
+          <div class="mb-8 md:mb-0">
+            <div class="mb-3 h-1 w-8 rounded-full bg-forest"></div>
+            <h2 class="text-2xl font-bold tracking-tight text-slate-900">2021</h2>
+            <p class="mt-2 text-sm leading-relaxed text-forest-soft">First DevOps hire: security foundations, CI/CD groundwork and full-stack delivery.</p>
+          </div>
+          <div class="space-y-11">
+
+            <article>
+              <h3 class="text-base font-semibold text-slate-900">Cloud security foundations</h3>
+              <ul class="mt-3 space-y-2 text-[15px] leading-relaxed text-slate-600">
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Audited and restricted IAM roles for CloudFormation, Lambda, CodePipeline and EC2 to least privilege across the entire application stack, closing findings from CloudMapper, Prowler and third-party penetration-test reports.</li>
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Implemented CIS AWS Foundations controls, removing unrestricted SSH and RDP ingress from every security group, and deployed WAF web ACLs on the load balancers with managed rule groups and carefully validated allow-listing for legitimate workspace and inbound document traffic.</li>
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Moved CloudTrail from a hand-built configuration to CloudFormation with multi-region logging, log-file integrity validation and encrypted storage, and wired CloudTrail events into CloudWatch alarms for real-time detection of security-relevant API activity.</li>
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Ran the annual network and security audit: regenerated network diagrams with CloudMapper, produced Prowler compliance reports and turned findings into a remediation backlog; evaluated AWS Inspector for automated AMI vulnerability assessment.</li>
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Added HTTP security headers (Content-Security-Policy, X-Frame-Options, Strict-Transport-Security) across all backend services and locked SonarQube access down to authorized workspace IPs on a stable elastic IP.</li>
               </ul>
               <div class="mt-4 flex flex-wrap gap-1.5">
                 <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">IAM</span>
-                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">KMS</span>
-                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">Cognito</span>
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">AWS WAF</span>
                 <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">CloudTrail</span>
-                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">IMDSv2</span>
-                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">MFA / SSO</span>
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">CIS</span>
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">Prowler / CloudMapper</span>
               </div>
             </article>
 
             <article>
-              <h3 class="text-base font-semibold text-slate-900">Vulnerability remediation &amp; secrets management</h3>
+              <h3 class="text-base font-semibold text-slate-900">CI/CD pipeline engineering</h3>
               <ul class="mt-3 space-y-2 text-[15px] leading-relaxed text-slate-600">
-                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Drove vulnerability remediation across 7+ repositories and their container images, resolving CVEs in OpenJDK, PyYAML, Jinja2, Requests, Boto3 and more, with proactive scanning through AWS Inspector.</li>
-                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Managed secrets across all accounts with AWS Systems Manager Parameter Store and Secrets Manager, plus an EFS-backed self-hosted Bitwarden run as a managed service with automated restarts and backups.</li>
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Architected a centralized, shared CodeBuild replication project used by all pipelines, with full repository cloning to standardize artifact handling across nested pipelines, and replaced legacy pipeline actions with a parameterized buildspec that cut duplication.</li>
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Fixed branch-scoped pipeline triggers so auto-starts fired only for the intended branches, preventing accidental deployments, and extended CodeDeploy access so developers could ship backend artifacts and Flyway database migrations safely.</li>
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Automated application recovery on server restart via a CodeDeploy-hook cron job, and built the production ALB healthy-host alarm that alerted the admin team the moment healthy instances hit zero, tightening incident response.</li>
               </ul>
               <div class="mt-4 flex flex-wrap gap-1.5">
-                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">AWS Inspector</span>
-                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">Parameter Store</span>
-                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">Secrets Manager</span>
-                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">Bitwarden</span>
-              </div>
-            </article>
-
-          </div>
-        </div>
-      </section>
-      <!-- ============ DATA, DATABASES & STREAMING ============ -->
-      <section id="data" class="scroll-mt-16 border-t border-sage-border py-14">
-        <div class="md:grid md:grid-cols-[180px_1fr] md:gap-10">
-          <div class="mb-8 md:mb-0">
-            <div class="mb-3 h-1 w-8 rounded-full bg-forest"></div>
-            <h2 class="text-2xl font-bold tracking-tight text-slate-900">Data, Databases &amp; Streaming</h2>
-          </div>
-          <div class="space-y-11">
-
-            <article>
-              <h3 class="text-base font-semibold text-slate-900">Kafka streaming platform</h3>
-              <ul class="mt-3 space-y-2 text-[15px] leading-relaxed text-slate-600">
-                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Deployed the event-streaming platform on AWS MSK with Terraform. Capacity-sized the cluster, codified all infrastructure and enforced per-service topic ownership behind an approval workflow to stop topic sprawl.</li>
-                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Integrated Avro schema management through AWS Glue Schema Registry with backward-compatible evolution enforced in CI, plus a reusable schema-publishing pipeline template adopted by every producing service.</li>
-                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Self-hosted the Kafbat console behind an ALB with SSL, OAuth login, audit logging and read-only developer roles, giving governance and visibility without handing out broker access.</li>
-              </ul>
-              <div class="mt-4 flex flex-wrap gap-1.5">
-                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">Apache Kafka</span>
-                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">AWS MSK</span>
-                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">Avro</span>
-                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">Glue Schema Registry</span>
-                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">Kafbat</span>
-              </div>
-            </article>
-
-            <article>
-              <h3 class="text-base font-semibold text-slate-900">Replication, migration &amp; restore</h3>
-              <ul class="mt-3 space-y-2 text-[15px] leading-relaxed text-slate-600">
-                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Set up cross-account AWS DMS replication so production databases sync into dev and analytics in near-real time, with PHI/PII automatically masked at the replication layer, and added alerting that auto-files tickets on task failure or replication-with-errors states.</li>
-                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Rebuilt the evaluation-database restore process from a manual EC2 procedure into an ECS Fargate task with a mounted EBS volume, executed through SSM Run Command, which eliminated storage-limit failures entirely.</li>
-                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Automated database permission synchronization after production restores (resolving the Liquibase changelog conflict), introduced AWS Backup retention policies with quarterly restore testing and built a pipeline copying contact-center data from S3/Athena into an Aurora PostgreSQL reporting database.</li>
-              </ul>
-              <div class="mt-4 flex flex-wrap gap-1.5">
-                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">AWS DMS</span>
-                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">Aurora PostgreSQL</span>
-                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">RDS</span>
-                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">AWS Backup</span>
-                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">EBS</span>
-              </div>
-            </article>
-
-            <article>
-              <h3 class="text-base font-semibold text-slate-900">PHI de-identification &amp; migrations</h3>
-              <ul class="mt-3 space-y-2 text-[15px] leading-relaxed text-slate-600">
-                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Designed and hardened the PHI de-identification pipeline underpinning SOC 2. Built on PostgreSQL pg_dump with field masking, de-identified views over PHI tables and DMS-based replication, it gives QA and developers safe access to production-like data with every manual step automated away.</li>
-                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Enforced per-service PostgreSQL users to remove shared credentials, managed schema migrations with Liquibase and Flyway across multiple databases and provisioned and tuned Aurora and RDS instances (Multi-AZ) for performance, availability and backups.</li>
-              </ul>
-              <div class="mt-4 flex flex-wrap gap-1.5">
-                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">PostgreSQL</span>
-                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">pg_dump</span>
-                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">Liquibase</span>
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">CodePipeline</span>
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">CodeBuild</span>
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">CodeDeploy</span>
                 <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">Flyway</span>
-                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">PHI/PII de-identification</span>
-              </div>
-            </article>
-
-          </div>
-        </div>
-      </section>
-
-      <!-- ============ OBSERVABILITY ============ -->
-      <section id="observability" class="scroll-mt-16 border-t border-sage-border py-14">
-        <div class="md:grid md:grid-cols-[180px_1fr] md:gap-10">
-          <div class="mb-8 md:mb-0">
-            <div class="mb-3 h-1 w-8 rounded-full bg-forest"></div>
-            <h2 class="text-2xl font-bold tracking-tight text-slate-900">Monitoring, Alerting &amp; Observability</h2>
-          </div>
-          <div class="space-y-11">
-
-            <article>
-              <h3 class="text-base font-semibold text-slate-900">Observability stack</h3>
-              <ul class="mt-3 space-y-2 text-[15px] leading-relaxed text-slate-600">
-                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Integrated Grafana Alloy across services, deployed automatically alongside every Fargate launch, to centralize observability, and established logging, metrics and alerting through CloudWatch with custom dashboards, composite alarms and real-time visibility.</li>
-                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Added targeted alarms where they mattered: MSK heap and consumer-lag alarms, dead-letter-queue alarms, heartbeat checks for instances without load balancers and expected-file-receipt alarms for external data feeds.</li>
-                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Cut CloudWatch spend by stripping unneeded agent-metric dimensions and tuning log retention across all log groups, and enabled ALB access logging and API Gateway stage logging for traffic analysis.</li>
-              </ul>
-              <div class="mt-4 flex flex-wrap gap-1.5">
-                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">Grafana Alloy</span>
-                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">CloudWatch</span>
-                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">OpenSearch</span>
-                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">Rollbar</span>
-                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">VPC Flow Logs</span>
               </div>
             </article>
 
             <article>
-              <h3 class="text-base font-semibold text-slate-900">Incident response &amp; on-call</h3>
+              <h3 class="text-base font-semibold text-slate-900">Infrastructure as code &amp; operations</h3>
               <ul class="mt-3 space-y-2 text-[15px] leading-relaxed text-slate-600">
-                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Served as primary infrastructure on-call engineer, owning triage, root-cause analysis and postmortem retrospectives to steadily improve reliability.</li>
-                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Automated incident escalation and creation through SNS and OpsGenie, wiring alarms directly into the ticketing system so production issues opened tickets automatically and response time improved.</li>
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Linted and cleaned the CloudFormation estate, removing unused fields, legacy exports and stale configuration as infrastructure scaled, and migrated the application stack to an updated schema with new database instances, Parameter Store entries and migration credentials.</li>
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Provisioned ECR repositories with access controls for Docker-based de-identified data and backup-validation workflows, and fixed S3 IAM permissions blocking the reference-data pipeline.</li>
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Scheduled automated kernel cleanup to silence false vulnerability noise from patch-manager leftovers, and cut idle compute cost with Lambda and EventBridge automation that started and stopped data-processing servers on demand.</li>
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Resolved a production-to-staging restoration failure caused by a cross-formulary database constraint in the migration scripts.</li>
               </ul>
               <div class="mt-4 flex flex-wrap gap-1.5">
-                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">OpsGenie</span>
-                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">SNS</span>
-                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">On-call / RCA</span>
-                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">Jira integration</span>
-              </div>
-            </article>
-
-          </div>
-        </div>
-      </section>
-
-      <!-- ============ LEADERSHIP ============ -->
-      <section id="leadership" class="scroll-mt-16 border-t border-sage-border py-14">
-        <div class="md:grid md:grid-cols-[180px_1fr] md:gap-10">
-          <div class="mb-8 md:mb-0">
-            <div class="mb-3 h-1 w-8 rounded-full bg-forest"></div>
-            <h2 class="text-2xl font-bold tracking-tight text-slate-900">Leadership &amp; Collaboration</h2>
-          </div>
-          <div class="space-y-11">
-
-            <article>
-              <h3 class="text-base font-semibold text-slate-900">Technical ownership &amp; mentoring</h3>
-              <ul class="mt-3 space-y-2 text-[15px] leading-relaxed text-slate-600">
-                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Served as the primary technical contact for AWS cloud architecture, CI/CD and deployment strategy across 5+ application teams and a 60-person engineering organization spread across multiple timezones.</li>
-                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Mentored two junior engineers to independence in under 90 days on on-call rotations and infrastructure-as-code requests, and led technical demos and internal documentation to support onboarding and knowledge sharing.</li>
-                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Drove the move to a team-owned, distributed infrastructure model, including the training and handover that let product teams provision and own their own infrastructure.</li>
-              </ul>
-              <div class="mt-4 flex flex-wrap gap-1.5">
-                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">Mentorship</span>
-                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">Technical leadership</span>
-                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">Documentation</span>
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">CloudFormation</span>
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">ECR</span>
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">Lambda</span>
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">EventBridge</span>
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">PostgreSQL</span>
               </div>
             </article>
 
             <article>
-              <h3 class="text-base font-semibold text-slate-900">Process &amp; cross-functional delivery</h3>
+              <h3 class="text-base font-semibold text-slate-900">Full-stack delivery &amp; customer provisioning</h3>
               <ul class="mt-3 space-y-2 text-[15px] leading-relaxed text-slate-600">
-                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Facilitated sprint planning, retrospectives and process improvements to drive Agile delivery and increase team velocity, and formalized change management so production changes shipped through a review process with rollback plans and post-deployment validation.</li>
-                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Collaborated with clients and cross-functional teams to gather requirements, provide technical updates and align on deployment schedules, and conducted extensive infrastructure and pipeline PR reviews across teams.</li>
-                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Led the infrastructure groundwork and proof of concept for integration with the national e-prescribing directory network, and delivered onboarding for new enterprise health-plan and pharmacy clients end to end.</li>
-                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Hands-on with AI-assisted development tools (Cursor, Claude, Gemini), including custom tool configuration for workflow optimization.</li>
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Shipped fixes across the prior-authorization workflow application: restored PDF rendering in the redacted document viewer, repaired data binding in list views and corrected pharmaceutical and plan-name display defects in claims and history views.</li>
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Built duplicate drug-strength validation end to end (backend and frontend) in the clinical drug-configuration tool, enforcing formulary data integrity, with error messages that name the exact drug, strength and conflicting group.</li>
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Provisioned a customer evaluation environment end to end: dedicated database instance, customer-specific application configuration, Cognito authentication and separated database scripts for roles, extensions and privilege grants, with all supporting formulary, plan and client-configuration data validated.</li>
+                <li class="relative pl-4 before:absolute before:left-0 before:top-[0.66em] before:h-1 before:w-1 before:rounded-full before:bg-sage-mid">Created and migrated Cognito user pools for the QA environment, updating keys, hosted domains, UI endpoints and identity-pool settings across the platform frontend and backend.</li>
               </ul>
               <div class="mt-4 flex flex-wrap gap-1.5">
-                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">Agile</span>
-                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">Change management</span>
-                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">Stakeholder alignment</span>
-                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">AI-assisted tooling</span>
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">Java</span>
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">Spring Boot</span>
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">PostgreSQL</span>
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">Cognito</span>
+                <span class="rounded-full bg-sage-light px-2.5 py-0.5 text-xs font-medium text-forest-dark">SonarQube</span>
               </div>
             </article>
 
